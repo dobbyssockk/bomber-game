@@ -1,0 +1,53 @@
+body {
+    background: url('bg.webp') center/cover no-repeat;
+    box-sizing: border-box;
+}
+
+.game .container {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.game__items {
+    background-color: #c0bdbd;
+    opacity: 0.9;
+    display: grid;
+    grid-template: repeat(10, 88px) / repeat(10, 88px);
+}
+
+.dirt {
+    background: url('icons/dirt.svg') center/cover no-repeat;
+}
+
+.stone {
+    background: url('icons/stone.svg') center/cover no-repeat;
+}
+
+.bomb {
+    background: url('icons/bomb.svg') center/cover no-repeat;
+    animation: pulseAnimation 1.2s ease-in-out infinite; /* Improved pulsing animation */
+}
+
+@keyframes pulseAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.explosion {
+    background: url('icons/explosion.svg') center/cover no-repeat;
+    animation: explosionAnimation 0.5s ease-out;
+}
+
+@keyframes explosionAnimation {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.first-player {
+    background: url('icons/player1.svg') center/cover no-repeat;
+}
+
+.second-player {
+    background: url('icons/player2.svg') center/cover no-repeat;
+}
